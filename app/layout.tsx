@@ -60,8 +60,12 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Zambia Construction Co. - Quality Residential & Commercial Builders",
-  description: "Leading construction company in Zambia offering top-tier residential and commercial building services. Building trust with quality.",
+  title: "Silverline Engineering - Quality Construction & Engineering Services",
+  description: "Zambian owned Construction Company specializing in Civil, Electrical, Mechanical, and Solar Engineering services.",
+  icons: {
+    icon: "/silverline_s_logo.png",
+    apple: "/silverline_s_logo.png",
+  },
 };
 
 export default function RootLayout({
