@@ -63,8 +63,8 @@ export const metadata: Metadata = {
   title: "Silverline Engineering - Quality Construction & Engineering Services",
   description: "Zambian owned Construction Company specializing in Civil, Electrical, Mechanical, and Solar Engineering services.",
   icons: {
-    icon: "/silverline_s_logo.png",
-    apple: "/silverline_s_logo.png",
+    icon: "/favicon.png",
+    apple: "/favicon.png",
   },
 };
 
