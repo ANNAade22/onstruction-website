@@ -35,7 +35,7 @@ export default function Testimonials() {
                         <Reveal key={index} delay={index * 0.1} width="100%">
                             <div className="bg-gray-50 p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 h-full">
                                 <Quote className="text-secondary mb-4" size={40} />
-                                <p className="text-gray-700 mb-6 italic text-lg leading-relaxed">"{testimonial.content}"</p>
+                                <p className="text-gray-700 mb-6 italic text-lg leading-relaxed">&quot;{testimonial.content}&quot;</p>
                                 <div>
                                     <h4 className="font-bold text-xl text-primary">{testimonial.name}</h4>
                                     <p className="text-secondary font-medium">{testimonial.role}</p>

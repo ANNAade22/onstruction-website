@@ -24,12 +24,15 @@ export default function TrustStrip() {
     ];
 
     const clients = [
-        { name: "Client 1", logo: "https://placehold.co/120x60/png?text=Client+1" },
-        { name: "Client 2", logo: "https://placehold.co/120x60/png?text=Client+2" },
-        { name: "Client 3", logo: "https://placehold.co/120x60/png?text=Client+3" },
-        { name: "Client 4", logo: "https://placehold.co/120x60/png?text=Client+4" },
-        { name: "Client 5", logo: "https://placehold.co/120x60/png?text=Client+5" },
-        { name: "Client 6", logo: "https://placehold.co/120x60/png?text=Client+6" },
+        { name: "Oryx Energies", logo: "/logos/oryx.png" },
+        { name: "Napoli Property", logo: "/logos/napoli.png" },
+        { name: "Real Estate Investments Zambia", logo: "/logos/reiz.png" },
+        { name: "Ministry of Education", logo: "/logos/ministry.png" },
+        { name: "Khalif Motors", logo: "/logos/khalif.png" },
+        { name: "Zambia Revenue Authority", logo: "/logos/zra.png" },
+        { name: "UNDP", logo: "/logos/undp.png" },
+        { name: "Engie PowerCorner", logo: "/logos/engie.png" },
+        { name: "Afroil", logo: "/logos/afroil.png" },
     ];
 
     return (

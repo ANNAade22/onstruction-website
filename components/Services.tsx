@@ -1,6 +1,6 @@
 "use client";
 
-import { Home, Building2, Hammer, ClipboardCheck, Warehouse, BrickWall, Truck, Zap, Factory, Fuel, Sun } from "lucide-react";
+import { Home, Building2, Hammer, Warehouse, BrickWall, Truck, Zap, Factory, Fuel, Sun } from "lucide-react";
 import Image from "next/image";
 import { Reveal } from "./Reveal";
 

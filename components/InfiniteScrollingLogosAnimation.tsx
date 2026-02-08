@@ -4,12 +4,15 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 const CompanyLogoData = [
-    { src: '/logos/acme.svg', alt: 'Acme Logo' },
-    { src: '/logos/quantum.svg', alt: 'Quantum Logo' },
-    { src: '/logos/echo.svg', alt: 'Echo Logo' },
-    { src: '/logos/celestial.svg', alt: 'Celestial Logo' },
-    { src: '/logos/pulse.svg', alt: 'Pulse Logo' },
-    { src: '/logos/apex.svg', alt: 'Apex Logo' },
+    { src: '/logos/oryx.png', alt: 'Oryx Energies' },
+    { src: '/logos/napoli.png', alt: 'Napoli Property' },
+    { src: '/logos/reiz.png', alt: 'Real Estate Investments Zambia' },
+    { src: '/logos/ministry.png', alt: 'Ministry of Education' },
+    { src: '/logos/khalif.png', alt: 'Khalif Motors' },
+    { src: '/logos/zra.png', alt: 'Zambia Revenue Authority' },
+    { src: '/logos/undp.png', alt: 'UNDP' },
+    { src: '/logos/engie.png', alt: 'Engie PowerCorner' },
+    { src: '/logos/afroil.png', alt: 'Afroil' },
 ];
 
 const InfiniteScrollingLogosAnimation = () => {

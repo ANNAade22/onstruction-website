@@ -15,7 +15,7 @@ export default function Hero() {
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-            const titleLines = textRef.current?.querySelectorAll("h1");
+            const titleLines = textRef.current?.querySelectorAll(".hero-text-line");
             const description = textRef.current?.querySelector("p");
             const cta = textRef.current?.querySelector(".cta-container");
             const testimonial = textRef.current?.querySelector(".testimonial-card");
@@ -84,21 +84,23 @@ export default function Hero() {
                     {/* Left Side - Title & Description */}
                     <div className="space-y-6 text-left">
                         <div className="space-y-2">
-                            <div className="overflow-hidden">
-                                <h1 className="hero-text-line text-5xl md:text-6xl xl:text-7xl font-bold text-white leading-tight">
-                                    SILVERLINE
-                                </h1>
-                            </div>
-                            <div className="overflow-hidden">
-                                <h1 className="hero-text-line text-5xl md:text-6xl xl:text-7xl font-bold text-white leading-tight">
-                                    ENGINEERING
-                                </h1>
-                            </div>
-                            <div className="overflow-hidden">
-                                <h1 className="hero-text-line text-5xl md:text-6xl xl:text-7xl font-bold text-white leading-tight">
-                                    LIMITED
-                                </h1>
-                            </div>
+                            <h1 className="font-bold text-white leading-tight">
+                                <div className="overflow-hidden">
+                                    <span className="hero-text-line block text-5xl md:text-6xl xl:text-7xl">
+                                        SILVERLINE
+                                    </span>
+                                </div>
+                                <div className="overflow-hidden">
+                                    <span className="hero-text-line block text-5xl md:text-6xl xl:text-7xl">
+                                        ENGINEERING
+                                    </span>
+                                </div>
+                                <div className="overflow-hidden">
+                                    <span className="hero-text-line block text-5xl md:text-6xl xl:text-7xl">
+                                        LIMITED
+                                    </span>
+                                </div>
+                            </h1>
                         </div>
 
                         <p className="text-lg md:text-xl text-gray-200 max-w-xl leading-relaxed opacity-0">

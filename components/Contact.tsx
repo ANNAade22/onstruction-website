@@ -7,7 +7,7 @@ import { Reveal } from "./Reveal";
 
 export default function Contact() {
     const [inquiryType, setInquiryType] = useState("General");
-    const [subscribeOffers, setSubscribeOffers] = useState(false);
+
 
     const inquiryTypes = ["Residential", "Commercial", "Renovation", "Infrastructure", "Consultation"];
 
@@ -127,8 +127,8 @@ export default function Contact() {
                                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                                     Tell Us What You Need
                                 </h3>
-                                <p className="text-gray-500 text-xs">
-                                    Fill out the form below and we will get back to you shortly.
+                                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                                    Ready to start your project? Let&apos;s discuss how we can help bring your vision to life.
                                 </p>
                             </Reveal>
                         </div>
