@@ -44,6 +44,34 @@ h6 {
   letter-spacing: -0.01em;
 }
 
+/* Reveal scroll animation (Intersection Observer + CSS) */
+.reveal {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.reveal[data-direction="up"] {
+  transform: translateY(50px);
+}
+.reveal[data-direction="down"] {
+  transform: translateY(-50px);
+}
+.reveal[data-direction="left"] {
+  transform: translateX(50px);
+}
+.reveal[data-direction="right"] {
+  transform: translateX(-50px);
+}
+.reveal.reveal-visible[data-direction="up"],
+.reveal.reveal-visible[data-direction="down"] {
+  transform: translateY(0);
+  opacity: 1;
+}
+.reveal.reveal-visible[data-direction="left"],
+.reveal.reveal-visible[data-direction="right"] {
+  transform: translateX(0);
+  opacity: 1;
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);

@@ -39,6 +39,8 @@ const InfiniteScrollingLogosAnimation = () => {
                                         alt={alt}
                                         width={100}
                                         height={40}
+                                        loading="lazy"
+                                        sizes="100px"
                                         className="h-full w-auto object-contain"
                                     />
                                 </div>

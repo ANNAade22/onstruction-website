@@ -48,6 +48,10 @@ export default function Contact() {
                                         src="/luxury_villa_zambia.png"
                                         alt="Modern Residential"
                                         fill
+                                        loading="lazy"
+                                        placeholder="blur"
+                                        blurDataURL="data:image/gif;base64,R0lGODlhAQABAAAAACw="
+                                        sizes="(max-width: 768px) 100vw, 50vw"
                                         className="object-cover hover:scale-105 transition-transform duration-700"
                                     />
                                 </div>
@@ -56,6 +60,10 @@ export default function Contact() {
                                         src="/office_complex_lusaka.png"
                                         alt="Commercial Complex"
                                         fill
+                                        loading="lazy"
+                                        placeholder="blur"
+                                        blurDataURL="data:image/gif;base64,R0lGODlhAQABAAAAACw="
+                                        sizes="(max-width: 768px) 100vw, 50vw"
                                         className="object-cover hover:scale-105 transition-transform duration-700"
                                     />
                                 </div>

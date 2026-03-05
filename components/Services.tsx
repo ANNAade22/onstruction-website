@@ -3,6 +3,49 @@
 import { Home, Building2, Hammer, Warehouse, BrickWall, Truck, Zap, Factory, Fuel, Sun } from "lucide-react";
 import Image from "next/image";
 import { Reveal } from "./Reveal";
+import { useRef, useEffect, useState } from "react";
+
+const BLUR_DATA_URL = "data:image/gif;base64,R0lGODlhAQABAAAAACw=";
+
+function LazyServiceVideo({ videoSrc, poster }: { videoSrc: string; poster: string }) {
+    const containerRef = useRef<HTMLDivElement>(null);
+    const videoRef = useRef<HTMLVideoElement>(null);
+    const [shouldLoad, setShouldLoad] = useState(false);
+
+    useEffect(() => {
+        const el = containerRef.current;
+        if (!el) return;
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry?.isIntersecting) setShouldLoad(true);
+            },
+            { rootMargin: "100px" }
+        );
+        observer.observe(el);
+        return () => observer.disconnect();
+    }, []);
+
+    useEffect(() => {
+        if (shouldLoad && videoRef.current) {
+            videoRef.current.src = videoSrc;
+        }
+    }, [shouldLoad, videoSrc]);
+
+    return (
+        <div ref={containerRef} className="absolute inset-0">
+            <video
+                ref={videoRef}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                muted
+                loop
+                autoPlay
+                playsInline
+                poster={poster}
+                preload="none"
+            />
+        </div>
+    );
+}
 
 const services = [
     {
@@ -103,22 +146,17 @@ export default function Services() {
                                 {(service.image || service.video) && (
                                     <div className="relative h-48 w-full overflow-hidden bg-gray-100">
                                         {service.video ? (
-                                            <video
-                                                src={service.video}
-                                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                                muted
-                                                loop
-                                                autoPlay
-                                                playsInline
-                                                poster={service.image}
-                                            />
+                                            <LazyServiceVideo videoSrc={service.video} poster={service.image} />
                                         ) : (
                                             <Image
                                                 src={service.image}
                                                 alt={service.title}
                                                 fill
+                                                loading="lazy"
+                                                placeholder="blur"
+                                                blurDataURL={BLUR_DATA_URL}
                                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                                             />
                                         )}
                                         {/* Overlay gradient */}

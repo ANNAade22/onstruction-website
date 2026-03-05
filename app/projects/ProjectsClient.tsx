@@ -34,6 +34,7 @@ export default function ProjectsClient() {
                         muted
                         loop
                         playsInline
+                        preload="metadata"
                         poster="/construction_hero_modern_site.png"
                         className="w-full h-full object-cover"
                     >
@@ -122,6 +123,7 @@ export default function ProjectsClient() {
                                             loading="lazy"
                                             placeholder="blur"
                                             blurDataURL="data:image/gif;base64,R0lGODlhAQABAAAAACw="
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                             className="object-cover transform group-hover:scale-110 transition-transform duration-700"
                                         />
                                         {/* Gradient Overlay */}

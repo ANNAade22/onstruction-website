@@ -10,7 +10,7 @@ export default function Footer() {
                     {/* Brand Section */}
                     <div className="md:col-span-4 space-y-4">
                         <div className="flex flex-col gap-1">
-                            <span className="text-3xl font-bold tracking-tight text-white" style={{ fontFamily: "var(--font-outfit)" }}>
+                            <span className="text-3xl font-bold tracking-tight text-white font-[var(--font-outfit)]">
                                 SILVERLINE
                             </span>
                             <span className="text-gray-400 text-xs font-semibold tracking-[0.3em] uppercase -mt-1">

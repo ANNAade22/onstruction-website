@@ -1,53 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Oswald, Montserrat, Teko, Russo_One, Outfit, Space_Grotesk, Alata, Inter, Playfair_Display } from "next/font/google";
+import { Outfit, Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const oswald = Oswald({
-  variable: "--font-oswald",
-  subsets: ["latin"],
-});
-
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
-  subsets: ["latin"],
-});
-
-const teko = Teko({
-  variable: "--font-teko",
-  subsets: ["latin"],
-});
-
-const russoOne = Russo_One({
-  variable: "--font-russo-one",
-  weight: "400",
-  subsets: ["latin"],
-});
-
-const outfit = Outfit({
-  variable: "--font-outfit",
-  subsets: ["latin"],
-});
-
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
-  subsets: ["latin"],
-});
-
-const alata = Alata({
-  variable: "--font-alata",
-  weight: "400",
-  subsets: ["latin"],
-});
 
 const inter = Inter({
   variable: "--font-inter",
@@ -56,6 +9,11 @@ const inter = Inter({
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair",
+  subsets: ["latin"],
+});
+
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
 });
 
@@ -162,7 +120,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${oswald.variable} ${montserrat.variable} ${teko.variable} ${russoOne.variable} ${outfit.variable} ${spaceGrotesk.variable} ${alata.variable} ${inter.variable} ${playfairDisplay.variable} antialiased`}
+        className={`${inter.variable} ${playfairDisplay.variable} ${outfit.variable} antialiased`}
       >
         <Script
           id="json-ld"

@@ -54,6 +54,8 @@ export default function TrustStrip() {
                                             alt={cert.name}
                                             width={100}
                                             height={50}
+                                            loading="lazy"
+                                            sizes="100px"
                                             className="h-12 w-auto object-contain"
                                         />
                                         <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[10px] text-gray-500 font-medium whitespace-nowrap pointer-events-none bg-white px-2 py-1 shadow-sm rounded border border-gray-100">
@@ -91,6 +93,8 @@ export default function TrustStrip() {
                                                 alt={client.name}
                                                 width={100}
                                                 height={50}
+                                                loading="lazy"
+                                                sizes="100px"
                                                 className="h-10 w-auto object-contain"
                                             />
                                         </div>
