@@ -33,6 +33,11 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# media now on Cloudinary (do not push)
+/public/projects/
+/public/hero-video.mp4
+/public/construction_hero_modern_site.png
+
 # vercel
 .vercel
 
