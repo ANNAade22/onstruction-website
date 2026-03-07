@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 import Link from "next/link";
 import { projects } from "@/lib/projects";
 import Navbar from "@/components/Navbar";
@@ -35,10 +35,10 @@ export default function ProjectsClient() {
                         loop
                         playsInline
                         preload="metadata"
-                        poster="/construction_hero_modern_site.png"
+                        poster={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/construction_hero_modern_site_ljm6up`}
                         className="w-full h-full object-cover"
                     >
-                        <source src="/hero-video.mp4" type="video/mp4" />
+                        <source src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/hero-video_so4stg`} type="video/mp4" />
                     </video>
                 </div>
 
@@ -67,7 +67,7 @@ export default function ProjectsClient() {
                     {/* Stats */}
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
                         {[
-                            { value: 11, suffix: "+", label: "Completed Projects" },
+                            { value: projects.filter(p => p.status === "complete").length, suffix: "+", label: "Completed Projects" },
                             { value: 4, suffix: "+", label: "Years Experience" },
                             { value: 8, suffix: "", label: "Service Categories" },
                             { value: 100, suffix: "%", label: "Client Satisfaction" },
@@ -116,15 +116,15 @@ export default function ProjectsClient() {
                                 >
                                     {/* Image Container */}
                                     <div className="relative h-72 w-full overflow-hidden shrink-0">
-                                        <Image
+                                        <CldImage
                                             src={project.image}
                                             alt={project.title}
                                             fill
+                                            crop="fill"
                                             loading="lazy"
-                                            placeholder="blur"
-                                            blurDataURL="data:image/gif;base64,R0lGODlhAQABAAAAACw="
                                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                             className="object-cover transform group-hover:scale-110 transition-transform duration-700"
+                                            format="auto"
                                         />
                                         {/* Gradient Overlay */}
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -159,9 +159,9 @@ export default function ProjectsClient() {
                                                 <MapPin size={14} />
                                                 Zambia
                                             </span>
-                                            <span className="flex items-center gap-1">
+                                            <span className={`flex items-center gap-1 font-medium ${project.status === "ongoing" ? "text-amber-600" : ""}`}>
                                                 <Calendar size={14} />
-                                                Completed
+                                                {project.status === "ongoing" ? "Ongoing" : "Completed"}
                                             </span>
                                         </div>
                                     </div>
@@ -186,7 +186,7 @@ export default function ProjectsClient() {
 
             {/* CTA Section */}
             <section className="py-20 bg-primary relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/construction_hero_modern_site.png')] opacity-5 bg-cover bg-center"></div>
+                <div className="absolute inset-0 opacity-5 bg-cover bg-center" style={{ backgroundImage: `url(https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/construction_hero_modern_site_ljm6up)` }}></div>
                 <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl"></div>
 
                 <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

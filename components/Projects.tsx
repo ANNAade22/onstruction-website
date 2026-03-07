@@ -1,5 +1,7 @@
+"use client";
+
 import Link from "next/link";
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 import { projects } from "@/lib/projects";
 import { Reveal } from "./Reveal";
 
@@ -25,15 +27,15 @@ export default function Projects() {
                             <Reveal key={project.id} delay={index * 0.1} width="100%">
                                 <div className="group overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow bg-white border border-gray-100 flex flex-col h-full">
                                     <div className="relative h-40 w-full overflow-hidden shrink-0">
-                                        <Image
+                                        <CldImage
                                             src={project.image}
                                             alt={project.title}
                                             fill
+                                            crop="fill"
                                             loading="lazy"
-                                            placeholder="blur"
-                                            blurDataURL="data:image/gif;base64,R0lGODlhAQABAAAAACw="
                                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                             className="object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                            format="auto"
                                         />
                                         <div className="absolute top-4 left-4 bg-secondary text-secondary-foreground text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                                             {project.category}

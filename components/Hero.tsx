@@ -26,10 +26,10 @@ export default function Hero() {
                     loop
                     playsInline
                     preload="metadata"
-                    poster="/construction_hero_modern_site.png"
+                    poster={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/construction_hero_modern_site_ljm6up`}
                     className="w-full h-full object-cover"
                 >
-                    <source src="/hero-video.mp4" type="video/mp4" />
+                    <source src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/hero-video_so4stg`} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </div>
